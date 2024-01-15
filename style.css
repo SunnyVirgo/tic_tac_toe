@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --color:rgb(188, 124, 5);
+    --bg-color:rgb(37, 37, 35);
+}
+body{
+    background-color: var(--bg-color);
+}
+.container{
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    color: rgb(188, 124, 5);
+    margin-top: 2rem;
+}
+.container .boxes{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.container .restartBtn{
+    background-color:var(--color) ;
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    outline: 0;
+    border: none;
+    font-size: .8rem;
+}
+.container .winningStatus, .container .playerTurn{
+    font-weight: 500;
+}
+.container .boxes .box{
+    width: 170px;
+    height: 140px;
+    background-color: transparent;
+    border: 2px solid var(--color);
+    border-top: none;
+    border-left: none;
+    font-size: 5rem;
+    text-align: center;
+}
+.container .boxes .box:nth-child(3n){
+    border-right: none;
+}
+.container .boxes .box:nth-child(6n)~.box{
+    border-bottom: none;
+}
